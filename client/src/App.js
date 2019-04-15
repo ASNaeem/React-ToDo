@@ -44,6 +44,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">ToDoLiSt</header>
+        <p>Hint: Click on a list item to remove it.</p>
         <form onSubmit={this.addItem}>
           <div className="input-group input-group-sm mb-3">
             <div className="input-group-prepend">
