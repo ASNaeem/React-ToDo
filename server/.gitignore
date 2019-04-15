@@ -8,7 +8,7 @@ Icon?
 Thumbs.db
 ehthumbs.db
 Desktop.ini
-
+yar.lock
 # Linux
 .directory
 *~
@@ -19,7 +19,7 @@ node_modules
 package-lock.json
 *.log
 *.gz
-
+yarn.lock
 
 # Coveralls
 coverage
