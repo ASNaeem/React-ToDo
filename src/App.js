@@ -14,6 +14,7 @@ class App extends Component {
 
     this.addItem = this.addItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
+    this.editItem = this.editItem.bind(this);
   }
   componentDidMount() {
     // use the node ref to create the animation
@@ -34,7 +35,6 @@ class App extends Component {
 
       this._inputElement.value = "";
     }
-    console.log(this.state.items);
 
     e.preventDefault();
   }
@@ -47,9 +47,11 @@ class App extends Component {
       items: filteredItems
     });
   }
-  hoverEffect() {
-
+  editItem(key){
+    let filteredItems = this.state.items.filter(function (items) {
+      return items.key !== key;
   }
+}
   render() {
     return (
       <div className="App">
@@ -73,8 +75,8 @@ class App extends Component {
           </div>
         </form>
 
-        <div ref={div => this.myElement = div} >
-          <TodoItems entries={this.state.items} delete={this.deleteItem} />
+        <div  ref={div => this.myElement = div} >
+          <TodoItems entries={this.state.items} delete={this.deleteItem} edit />
         </div>
       </div>
     );

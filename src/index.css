@@ -13,19 +13,3 @@ code {
     monospace;
 }
 
-textarea.html-text-box {background-color:#ffffff;
-  background-image:url(http://);
-  background-repeat:no-repeat;
-  background-attachment:fixed;
-  border-width:1;
-  border-style:solid;
-  border-color:#cccccc;
-  font-family:Arial;
-  font-size:14pt;
-  color:#000000;
-}
-input.html-text-box {background-color:#ffffff;
-  font-family:Arial;
-  font-size:14pt;
-  color:#000000;
-}
