@@ -1,17 +1,25 @@
 import React, { Component } from "react";
 import TodoItems from "./TodoItem";
-
+import TweenLite from "gsap";
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       items: []
     };
+    // reference to the DOM node
+    this.myElement = null;
+    // reference to the animation
+    this.myTween = null;
 
     this.addItem = this.addItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
   }
-
+  componentDidMount() {
+    // use the node ref to create the animation
+    this.myTween = TweenLite.to(this.myElement, 1, { x: 100, y: 100 });
+    TweenLite.to(this.myElement, 1, {x: 100, y: 100});
+  }
   addItem(e) {
     if (this._inputElement.value !== "") {
       let newItem = {
@@ -31,7 +39,7 @@ class App extends Component {
     e.preventDefault();
   }
   deleteItem(key) {
-    var filteredItems = this.state.items.filter(function(items) {
+    let filteredItems = this.state.items.filter(function (items) {
       return items.key !== key;
     });
 
@@ -39,7 +47,9 @@ class App extends Component {
       items: filteredItems
     });
   }
+  hoverEffect() {
 
+  }
   render() {
     return (
       <div className="App">
@@ -63,7 +73,7 @@ class App extends Component {
           </div>
         </form>
 
-        <div>
+        <div ref={div => this.myElement = div} >
           <TodoItems entries={this.state.items} delete={this.deleteItem} />
         </div>
       </div>

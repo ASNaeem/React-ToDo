@@ -4,10 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "create-react-app": "^2.1.8",
-    "gh-pages": "^2.0.1",
-    "gitignore": "^0.6.0",
-    "homepage": "https://ASNaeem.github.io/React-ToDo",
+    "gsap": "^2.1.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-flip-move": "^3.0.3",
